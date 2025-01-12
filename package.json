@@ -1,15 +1,37 @@
 {
   "name": "coding-specifications-cli",
+  "private": true,
   "version": "1.0.0",
   "description": "前端编码规范cli",
   "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "init": "pnpm install",
+    "clean": "lerna clean && rm -rf node_modules",
+    "build": "lerna run build --stream",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "deploy": "bash deploy.sh",
+    "publish": "lerna publish",
+    "lint": "markdownlint README.md",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lerna": "^8.1.9"
+    "conventional-changelog-conventionalcommits": "^4.6.3"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0",
+    "@commitlint/cli": "^17.8.1",
+    "husky": "^9.1.7",
+    "lerna": "^8.1.9",
+    "markdownlint": "^0.28.2"
   }
 }
