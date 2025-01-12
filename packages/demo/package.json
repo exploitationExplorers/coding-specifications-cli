@@ -1,0 +1,29 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "fengzebing <1390653296@qq.com>",
+  "homepage": "https://github.com/exploitationExplorers/coding-specifications-cli#readme",
+  "license": "ISC",
+  "main": "lib/demo.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exploitationExplorers/coding-specifications-cli.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/demo.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/exploitationExplorers/coding-specifications-cli/issues"
+  }
+}
